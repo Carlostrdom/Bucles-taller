@@ -187,3 +187,81 @@ for (let numero of numerosE) {
     }
 }
 console.log("El número más chico es:", numeroMasChico);
+
+// respuesta 13
+let juegoActivo = true;
+
+while (juegoActivo) {
+    let eleccion1, eleccion2;
+
+    do {
+        eleccion1 = prompt("Jugador 1, elige Piedra, Papel o Tijeras:").toLowerCase();
+    } while (!['piedra', 'papel', 'tijeras'].includes(eleccion1));
+
+    do {
+        eleccion2 = prompt("Jugador 2, elige Piedra, Papel o Tijeras:").toLowerCase();
+    } while (!['piedra', 'papel', 'tijeras'].includes(eleccion2));
+
+    if (eleccion1 === eleccion2) {
+        alert("¡Empate! Jueguen de nuevo.");
+    } else if (
+        (eleccion1 === 'piedra' && eleccion2 === 'tijeras') ||
+        (eleccion1 === 'papel' && eleccion2 === 'piedra') ||
+        (eleccion1 === 'tijeras' && eleccion2 === 'papel')
+    ) {
+        alert(`Jugador 1 gana con ${eleccion1}!`);
+        juegoActivo = false;
+    } else {
+        alert(`Jugador 2 gana con ${eleccion2}!`);
+        juegoActivo = false;
+    }
+}
+
+
+//respuesta 14
+
+let n = 5;
+
+
+for (let i = 1; i <= n; i++) {
+    let stars = '';
+
+    for (let j = 0; j < i; j++) {
+        stars += '*';
+    }
+
+    console.log(stars);
+}
+
+
+// respuesta 15
+
+let a = 5;
+
+
+for (let i = a; i >= 1; i--) {
+    let stars = '';
+
+    for (let j = 0; j < i; j++) {
+        stars += '*';
+    }
+
+    console.log(stars);
+}
+
+
+// respuesta 16
+
+let arr = [5, 2, 9, 1, 5, 6, 7, 3, 8, 4];
+
+for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+            let temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+}
+
+console.log(arr);
