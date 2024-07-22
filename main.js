@@ -160,3 +160,30 @@ while (true) {
 
 console.log(`Suma de números pares: ${paraPares}`);
 console.log(`Suma de números impares: ${paraimpares}`);
+
+// respuesta 11
+
+let numerosD = [15, 22, 8, 31, 7, 45, 29, 10, 3, 18];
+
+let numeroMasGrande = numerosD[0];
+
+for (let i = 1; i < numerosD.length; i++) {
+    if (numerosD[i] > numeroMasGrande) {
+        numeroMasGrande = numerosD[i];
+    }
+}
+
+console.log(`El número más grande en el array es ${numeroMasGrande}`);
+
+// respuesta 12
+
+let numerosE = [34, 7, 23, 32, 5, 62, 19, 43, 10, 8];
+
+let numeroMasChico = numerosE[0];
+
+for (let numero of numerosE) {
+    if (numero < numeroMasChico) {
+        numeroMasChico = numero;
+    }
+}
+console.log("El número más chico es:", numeroMasChico);
